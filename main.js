@@ -5,6 +5,7 @@ const carritoIcon = document.querySelector('.navbar-shopping-cart')
 const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const aside = document.querySelector('.product-detail');
+const productsContainer = document.querySelector('.cards-container');
 
 
 
@@ -69,7 +70,24 @@ productList.push = ({
 
     function renderProducts(arr) {
         for (product of arr) {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+            const img1 = document.createElement('img');
+            img1.setAttribute('src',product.image);
+            const productInfo = document.createElement('div');
+            productInfo.classList.add('product-info');
+            const divDiv = document.createElement('div');
+            const name = document.createElement('p');
+            const price = document.createElement('p');
+            divDiv.append(name,price);
+            const figure = document.createElement('figure');
+            const img2 = document.createElement('img');            
+            img2.setAttribute('src','./icons/bt_add_to_cart.svg');
+            figure.append(img2);
+            productInfo.append(divDiv,figure);
+            productCard.append(productInfo,img1);
             
+            productsContainer.append(productCard);
 
         }
     }
