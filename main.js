@@ -69,6 +69,7 @@ productList.push = ({
 
     function renderProducts(arr) {
         for (product of arr) {
+            
 
         }
     }
