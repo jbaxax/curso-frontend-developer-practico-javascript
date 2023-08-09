@@ -52,17 +52,17 @@ function toogleDesktopAside() {
 </div>  */
 
 productList = [];
-productList.push() = ({
+productList.push({
     name: 'Bike',
     price: 400,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 });
-    productList.push() = ({
+    productList.push({
         name: 'Bike',
         price: 400,
         image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     });
-    productList.push() = ({
+    productList.push({
         name: 'Bike',
         price: 400,
         image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
@@ -76,16 +76,22 @@ productList.push() = ({
             img1.setAttribute('src',product.image);
             const productInfo = document.createElement('div');
             productInfo.classList.add('product-info');
+            
             const divDiv = document.createElement('div');
-            const name = document.createElement('p');
             const price = document.createElement('p');
-            divDiv.append(name,price);
+            price.innerText='$'+product.price;
+            const name = document.createElement('p');
+            name.innerText =product.name;
+            
+            
+            divDiv.append(price,name);
+
             const figure = document.createElement('figure');
             const img2 = document.createElement('img');            
             img2.setAttribute('src','./icons/bt_add_to_cart.svg');
             figure.append(img2);
             productInfo.append(divDiv,figure);
-            productCard.append(productInfo,img1);
+            productCard.append(img1,productInfo);
             
             productsContainer.append(productCard);
 
