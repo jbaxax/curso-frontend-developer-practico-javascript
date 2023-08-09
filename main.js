@@ -52,17 +52,17 @@ function toogleDesktopAside() {
 </div>  */
 
 productList = [];
-productList.push = ({
+productList.push() = ({
     name: 'Bike',
     price: 400,
     image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 });
-    productList.push = ({
+    productList.push() = ({
         name: 'Bike',
         price: 400,
         image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
     });
-    productList.push = ({
+    productList.push() = ({
         name: 'Bike',
         price: 400,
         image: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
